@@ -218,7 +218,7 @@ LOCAL_GENERATED_SOURCES += $(GEN)
 LOCAL_CFLAGS += $(rs_base_CFLAGS)
 LOCAL_CFLAGS += -DANDROID_RS_SERIALIZE
 LOCAL_CFLAGS += -fPIC
-LOCAL_CFLAGS += -Qunused-arguments -fno-strict-aliasing -Wno-unknown-warning-option
+LOCAL_CFLAGS += $(call cc-option,-Qunused-arguments) -fno-strict-aliasing -Wno-unknown-warning-option
 
 LOCAL_SRC_FILES:= \
 	rsAdapter.cpp \
